@@ -1,6 +1,6 @@
-package com.example.datatest.model.entity;
+package com.example.datatest.data.entity;
 
-import com.example.datatest.model.type.PropertyType;
+import com.example.datatest.data.type.Type;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -23,7 +23,7 @@ public class Employer {
     private String legalAddress;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "property_type_id")
-    private PropertyType propertyType;
+    @JoinColumn(name = "type_id")
+    private Type type;
 
 }
