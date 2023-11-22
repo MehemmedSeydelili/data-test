@@ -11,7 +11,7 @@ import java.util.List;
 @Table(name = "deactives")
 public class DeactiveList {
 
-    //List<Deactive> deactives;
+    /*List<Deactive> deactives;*/
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
