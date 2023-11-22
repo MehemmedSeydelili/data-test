@@ -1,5 +1,6 @@
 package com.example.datatest.data.entity;
 
+import com.example.datatest.data.activedeactive.Active;
 import com.example.datatest.data.type.Type;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -35,5 +36,8 @@ public class Contract {
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "type_id")
     private Type type;
+
+    @OneToOne(mappedBy = "contract")
+    private Active active;
 
 }

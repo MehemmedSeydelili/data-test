@@ -8,7 +8,7 @@ public class EmployeeDto {
     private String name;
     private String surname;
     private String patronymic;
-    private Object phone;
+    private String phone;
     private String workPlace;
     private String position;
     private Double salary;

@@ -1,5 +1,6 @@
 package com.example.datatest.data.entity;
 
+import com.example.datatest.data.activedeactive.Active;
 import com.example.datatest.data.type.Type;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -13,12 +14,12 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String pin;
+    private String pin; // 31842PY
 
     private String name;
     private String surname;
     private String patronymic;
-    private Object phone;
+    private String phone;
     private String workPlace;
     private String position;
 
@@ -33,4 +34,9 @@ public class Employee {
     @JoinColumn(name = "type_id")
     private Type type;
 
+    @OneToOne(mappedBy = "employee")
+    private Active active;
+
+    //Employer
+    //Contract
 }
