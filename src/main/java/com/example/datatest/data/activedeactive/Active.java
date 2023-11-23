@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 import org.hibernate.internal.util.collections.IdentityMap;
 
 @Entity
-@Table(name = "actives")
+@Table(name = "ACTIVES")
 public class Active {
 
     @Id

@@ -7,20 +7,25 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "employers")
+@Table(name = "EMPLOYER")
 public class Employer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "VOEN", columnDefinition = "VARCHAR2(255)")
     private String voen;
+
+    @Column(name = "NAME", columnDefinition = "VARCHAR2(255)")
     private String name;
 
-    @Column(name = "worker_count")
+    @Column(name = "WORKER_COUNT", columnDefinition = "NUMBER")
     private Integer workerCount;
+
+    @Column(name = "PHONE", columnDefinition = "VARCHAR2(255)")
     private String phone;
 
-    @Column(name = "legal_adress")
+    @Column(name = "LEGAL_ADDRESS", columnDefinition = "VARCHAR2(255)")
     private String legalAddress;
 
     @ManyToOne(cascade = CascadeType.ALL)

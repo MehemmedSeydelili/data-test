@@ -7,27 +7,41 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "employees")
+@Table(name = "EMPLOYEES")
 public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String pin; // 31842PY
+    @Column(name = "PIN", columnDefinition = "VARCHAR2(255)")
+    private String pin;
 
+    @Column(name = "NAME", columnDefinition = "VARCHAR2(255)")
     private String name;
+
+    @Column(name = "SURNAME", columnDefinition = "VARCHAR2(255)")
     private String surname;
+
+    @Column(name = "PATRONYMIC", columnDefinition = "VARCHAR2(255)")
     private String patronymic;
+
+    @Column(name = "PHONE", columnDefinition = "VARCHAR2(255)")
     private String phone;
+
+    @Column(name = "WORK_PLACE", columnDefinition = "VARCHAR2(255)")
     private String workPlace;
+
+    @Column(name = "POSITION", columnDefinition = "VARCHAR2(255)")
     private String position;
 
-    @Column(name = "position_labour_contract")
+    @Column(name = "POSITION_LABOUR_CONTRACT", columnDefinition = "VARCHAR2(255)")
     private String positionLabourContract;
 
+    @Column(name = "SALARY", columnDefinition = "NUMBER")
     private Double salary;
 
+    @Column(name = "SSN", columnDefinition = "VARCHAR2(255)")
     private String sSN;
 
     @ManyToOne(cascade = CascadeType.ALL)

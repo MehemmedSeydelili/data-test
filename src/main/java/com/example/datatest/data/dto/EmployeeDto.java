@@ -13,5 +13,6 @@ public class EmployeeDto {
     private String position;
     private Double salary;
     private String sSN;
+    private Long typeId;
 
 }

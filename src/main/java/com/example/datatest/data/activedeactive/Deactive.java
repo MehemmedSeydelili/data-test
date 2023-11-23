@@ -6,15 +6,12 @@ import com.example.datatest.data.entity.Employee;
 import com.example.datatest.data.entity.Employer;
 import jakarta.persistence.*;
 
-/*@Entity
-@Table(name = "actives")*/
+@Entity
+@Table(name = "DEACTIVES")
 public class Deactive {
-    private Employer employer;
-    private Employee employee;
-    private Contract contract;
 
 
-    /*@Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -28,5 +25,6 @@ public class Deactive {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "contract_id")
-    private Contract contract;*/
+    private Contract contract;
+
 }

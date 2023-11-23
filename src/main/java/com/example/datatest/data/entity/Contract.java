@@ -6,31 +6,36 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
 @Data
-@Table(name = "contracts")
+@Table(name = "CONTRACTS")
 public class Contract {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "begin_date")
-    private LocalDate beginDate;
+    @Column(name = "BEGIN_DATE", columnDefinition = "DATE")
+    private Date beginDate;
 
-    @Column(name = "sign_date")
-    private LocalDate signDate;
+    @Column(name = "SIGN_DATE", columnDefinition = "DATE")
+    private Date signDate;
 
-    @Column(name = "insert_date")
-    private LocalDate insertDate;
+    @Column(name = "INSERT_DATE", columnDefinition = "DATE")
+    private Date insertDate;
 
-    @Column(name = "end_date")
-    private LocalDate endDate;
+    @Column(name = "END_DATE", columnDefinition = "DATE")
+    private Date endDate;
 
-    @Column(name = "next_end_date")
-    private LocalDate nextEndDate;
+    @Column(name = "TERMINATE_DATE", columnDefinition = "DATE")
+    private Date terminateDate;
 
+    @Column(name = "NEXT_END_DATE", columnDefinition = "DATE")
+    private Date nextEndDate;
+
+    @Column(name = "NUMBER_COLUMN", columnDefinition = "VARCHAR2(255)")
     private String number;
 
     @ManyToOne(cascade = CascadeType.ALL)
