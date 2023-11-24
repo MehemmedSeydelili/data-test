@@ -2,7 +2,7 @@ package com.example.datatest.service.impl;
 
 import com.example.datatest.data.dto.EmployeeDto;
 import com.example.datatest.data.entity.Employee;
-import com.example.datatest.data.type.Type;
+import com.example.datatest.data.entity.type.Type;
 import com.example.datatest.mapper.EmployeeMapper;
 import com.example.datatest.mapper.TypeMapper;
 import com.example.datatest.repository.EmployeeRepository;
@@ -15,7 +15,7 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-public class IEmployeeService implements EmployeeService {
+public class EmployeeServiceImpl implements EmployeeService {
 
     private final EmployeeRepository employeeRepository;
     private final TypeService typeService;

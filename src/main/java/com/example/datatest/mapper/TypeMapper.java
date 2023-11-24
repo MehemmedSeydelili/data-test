@@ -1,7 +1,7 @@
 package com.example.datatest.mapper;
 
 import com.example.datatest.data.dto.TypeDto;
-import com.example.datatest.data.type.Type;
+import com.example.datatest.data.entity.type.Type;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 

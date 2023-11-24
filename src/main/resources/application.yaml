@@ -5,11 +5,12 @@ spring:
     username: test1
     password: a12345A
     driver-class-name: oracle.jdbc.OracleDriver
+    hikari:
+      schema: TEST1
   jpa:
-    database-platform: org.hibernate.dialect.Oracle12cDialect
+    database-platform: org.hibernate.dialect.OracleDialect
     hibernate:
       ddl-auto: update
-
     show-sql: true
     open-in-view: false
     properties:

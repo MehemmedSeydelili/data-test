@@ -1,11 +1,8 @@
 package com.example.datatest.data.entity;
 
-import com.example.datatest.data.activedeactive.Active;
-import com.example.datatest.data.type.Type;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -38,11 +35,14 @@ public class Contract {
     @Column(name = "NUMBER_COLUMN", columnDefinition = "VARCHAR2(255)")
     private String number;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    /*@ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "type_id")
     private Type type;
 
     @OneToOne(mappedBy = "contract")
     private Active active;
 
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "employee_id")
+    private Employee employee;*/
 }

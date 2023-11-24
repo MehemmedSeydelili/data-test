@@ -1,11 +1,10 @@
 package com.example.datatest.service.impl;
 
 import com.example.datatest.data.dto.TypeDto;
-import com.example.datatest.data.type.Type;
+import com.example.datatest.data.entity.type.Type;
 import com.example.datatest.mapper.TypeMapper;
 import com.example.datatest.repository.TypeRepository;
 import com.example.datatest.service.TypeService;
-import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -13,7 +12,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class ITypeService implements TypeService {
+public class TypeServiceImpl implements TypeService {
 
     private final TypeRepository typeRepository;
 

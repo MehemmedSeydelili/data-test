@@ -1,9 +1,9 @@
 package com.example.datatest.repository;
 
-import com.example.datatest.data.entity.type.Type;
+import com.example.datatest.data.entity.ApiData;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface TypeRepository extends JpaRepository<Type, Long> {
+public interface ApiDataRepository extends JpaRepository<ApiData,Long> {
 }

@@ -1,4 +1,4 @@
-package com.example.datatest.data.type;
+package com.example.datatest.data.entity.type;
 
 import com.example.datatest.data.entity.Contract;
 import com.example.datatest.data.entity.Employee;
@@ -25,7 +25,7 @@ public class Type {
     @Column(name = "DESCRIPTION", columnDefinition = "VARCHAR2(1000)")
     public String description;
 
-    @OneToMany(mappedBy = "type",cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+ /*   @OneToMany(mappedBy = "type",cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Contract> contracts;
 
     @OneToMany(mappedBy = "type",cascade = CascadeType.ALL, fetch = FetchType.LAZY)
@@ -33,4 +33,4 @@ public class Type {
 
     @OneToMany(mappedBy = "type",cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Employer> employers;
-}
+*/}

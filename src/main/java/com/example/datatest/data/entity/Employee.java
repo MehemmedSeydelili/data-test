@@ -1,7 +1,5 @@
 package com.example.datatest.data.entity;
 
-import com.example.datatest.data.activedeactive.Active;
-import com.example.datatest.data.type.Type;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -44,13 +42,17 @@ public class Employee {
     @Column(name = "SSN", columnDefinition = "VARCHAR2(255)")
     private String sSN;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+   /* @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "type_id")
     private Type type;
 
     @OneToOne(mappedBy = "employee")
     private Active active;
 
-    //Employer
-    //Contract
+    @OneToMany(mappedBy = "employee")
+    private List<Employer> employers;
+
+    @OneToMany(mappedBy = "contract")
+    private List<Contract> contracts;*/
+
 }

@@ -11,7 +11,7 @@ import java.util.Optional;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/v2/EmployeeInfo")
+@RequestMapping("/api/v2/employee")
 public class EmployeeController {
 
     private final EmployeeService employeeService;
