@@ -9,7 +9,8 @@ import java.time.LocalDate;
 
 @Entity
 @Data
-
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "API_REQUEST_HISTORY")
 public class ApiRequestDetails {
 
@@ -32,16 +33,4 @@ public class ApiRequestDetails {
     @Column(name = "MESSAGE", columnDefinition = "VARCHAR2(255)")
     private String message;
 
-
-    public ApiRequestDetails() {
-    }
-
-    public ApiRequestDetails(Long id, String request, String requestMethod, String response, LocalDate date, String message) {
-        this.id = id;
-        this.request = request;
-        this.requestMethod = requestMethod;
-        this.response = response;
-        this.date = date;
-        this.message = message;
-    }
 }
